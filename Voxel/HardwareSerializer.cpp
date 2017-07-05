@@ -55,7 +55,7 @@ bool HardwareSerializer::read(Version &version, TimeStampType &knownTimestamp, S
   
   if(data[0] != 'V' || data[1] != 'O' || data[2] != 'X' || data[3] != 'E' || data[4] != 'L')
   {
-    logger(LOG_ERROR) << "HardwareSerializer: Invalid config data in hardware." << std::endl;
+    logger(LOG_WARNING) << "HardwareSerializer: No config file found or config data in hardware is invalid." << std::endl;
     return false;
   }
   
